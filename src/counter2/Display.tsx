@@ -11,9 +11,10 @@ type CounterProps = {
     minValue: number
     maxValue: number
     status: StatusType
+    setStatus:(status: StatusType) => void
 }
 
-export const Display = ({value, increase, reset, maxValue, minValue, status}: CounterProps) => {
+export const Display = ({value, increase, reset, maxValue, minValue, status, setStatus}: CounterProps) => {
 
     const increaseHandler = () => {
         increase()
@@ -21,6 +22,10 @@ export const Display = ({value, increase, reset, maxValue, minValue, status}: Co
 
     const resetHandler = () => {
         reset()
+    }
+
+    const setHandler = () => {
+        setStatus('settings')
     }
 
     const stylesForCounter =
@@ -42,6 +47,7 @@ export const Display = ({value, increase, reset, maxValue, minValue, status}: Co
             <div className={s.containerButtons}>
                 <Button name={'inc'} disabled={value === maxValue || status === 'error'} callback={increaseHandler}/>
                 <Button name={'reset'} disabled={value=== minValue || status === 'error'} callback={resetHandler}/>
+                <Button name={'set'} disabled={status === 'error'} callback={setHandler}/>
             </div>
 
         </div>

@@ -27,7 +27,7 @@ function Counter2() {
             if (JSON.parse(maxValue) <= minValue || JSON.parse(minValue) < 0) {
                 setStatus('error')
             } else {
-                setStatus('settings')
+                setStatus('display')
             }
         }
 
@@ -63,7 +63,7 @@ function Counter2() {
     const changeMinValue = (minValue: number) => {
 
         setMinValue(minValue)
-        if (maxValue<= minValue || minValue < 0) {
+        if (maxValue <= minValue || minValue < 0) {
             setStatus('error')
         } else {
             setStatus('settings')
@@ -79,23 +79,29 @@ function Counter2() {
 
     return (
         <div className={s.Counter1}>
-            <Display value={value}
-                     increase={increase}
-                     reset={reset}
-                     minValue={minValue}
-                     maxValue={maxValue}
-                     status={status}
-            />
-            <Settings value={value}
-                      increase={increase}
-                      reset={reset}
-                      minValue={minValue}
-                      maxValue={maxValue}
-                      changeMaxValue={changeMaxValue}
-                      changeMinValue={changeMinValue}
-                      setSettings={setSettings}
-                      status={status}
-            />
+            {status === 'display'
+                ? <Display value={value}
+                           increase={increase}
+                           reset={reset}
+                           minValue={minValue}
+                           maxValue={maxValue}
+                           status={status}
+                           setStatus={setStatus}
+                />
+                : <Settings value={value}
+                            increase={increase}
+                            reset={reset}
+                            minValue={minValue}
+                            maxValue={maxValue}
+                            changeMaxValue={changeMaxValue}
+                            changeMinValue={changeMinValue}
+                            setSettings={setSettings}
+                            status={status}
+
+                />
+            }
+
+
         </div>
 
     );

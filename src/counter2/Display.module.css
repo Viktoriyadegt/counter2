@@ -13,7 +13,7 @@
 .display {
     border: 3px solid rgba(44, 214, 236, 0.85);
     border-radius: 10px;
-    width: 70%;
+    width: 80%;
     height: 50%;
     display: flex;
     justify-content: center;
@@ -24,16 +24,20 @@
     text-align: center;
 }
 
-.error{
+.error {
     color: red;
 }
 
-.settings{
+.settings {
     font-size: 30px;
 }
 
 .containerButtons {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
+    border: 3px solid rgba(44, 214, 236, 0.85);
+    border-radius: 15px;
+    padding: 5px;
 }
