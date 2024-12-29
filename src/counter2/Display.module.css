@@ -7,11 +7,11 @@
     align-items: center;
     gap: 20px;
     border-radius: 15px;
-    border: 3px solid rgba(44, 214, 236, 0.85);
+    border: 3px solid rgba(232, 126, 87, 0.85);
 }
 
 .display {
-    border: 3px solid rgba(44, 214, 236, 0.85);
+    border: 3px solid rgba(232, 126, 87, 0.85);
     border-radius: 10px;
     width: 80%;
     height: 50%;
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    border: 3px solid rgba(44, 214, 236, 0.85);
+    border: 3px solid rgba(232, 126, 87, 0.85);
     border-radius: 15px;
     padding: 5px;
 }

@@ -1,7 +1,7 @@
 .button {
     width: 25%;
     height: 40px;
-    background-color:rgba(44, 214, 236, 0.85);
+    background-color:rgba(232, 126, 87, 0.85);
     border: none;
     border-radius: 5px;
     color: white;
@@ -20,9 +20,9 @@
 }
 
 .button:hover {
-    background-color: #60d8d8;
+    background-color: rgba(244, 184, 163, 0.98);;
 }
 
 .button:active{
-    background-color: #429f9f;
+    background-color: rgba(232, 189, 175, 0.85);;
 }
